@@ -1,0 +1,164 @@
+/* Estilos generales */
+body {
+    background-color: #f5f5f5; /* Fondo blanco suave */
+    font-family: 'Arial', sans-serif;
+    color: #f5f5f5; /* Texto en blanco suave */
+    margin: 0;
+    padding: 20px;
+    background-image: url('/static/portafolio_app/pexels-pixabay-326333.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Imagen fija al hacer scroll */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Enlaces */
+a {
+    color: #ffff66; /* Amarillo claro */
+    text-decoration: none;
+    border-bottom: 2px solid #ffff66;
+}
+
+a:hover {
+    color: #ffcc33; /* Amarillo más oscuro al pasar el cursor */
+    border-bottom: 2px solid #ffcc33;
+}
+
+/* Botones */
+button {
+    background-color: #4a4a2d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3b3b2a;
+}
+
+/* Títulos y párrafos */
+h1, h2 {
+    color: #f0f0f0;
+}
+
+p {
+    color: #f1f1f1;
+    font-size: 18px; 
+    line-height: 1.6;
+}
+
+h1, p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra en los textos */
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #4a4a2d; /* Verde tierra */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin: 0 15px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.active {
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50; /* Verde en la página activa */
+}
+
+/* Medios de pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+/* Estructura del layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+body {
+    flex: 1 0 auto;
+    padding-top: 60px; /* Altura de la barra de navegación */
+    padding-bottom: 60px; /* Altura del pie de página */
+}
+
+main {
+    flex-grow: 1;
+    padding: 0 20px; /* Ajuste del padding general */
+}
+
+/* Pie de página */
+footer {
+    background-color: #4a4a2d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-links a {
+    margin: 10px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ffcc33;
+}

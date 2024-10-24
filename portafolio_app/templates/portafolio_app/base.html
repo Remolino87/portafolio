@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'portafolio_app/styles.css' %}">
+    <title>{% block title %}Portafolio{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="{% url 'home' %}" class="navbar-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Inicio</a>
+            </li>
+            <li class="navbar-item">
+                <a href="{% url 'projects' %}" class="navbar-link {% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Proyectos</a>
+            </li>
+            <li class="navbar-item">
+                <a href="{% url 'about' %}" class="navbar-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">Acerca de mí</a>
+            </li>
+            
+            <li class="navbar-item">
+                <a href="{% url 'contact' %}" class="navbar-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contacto</a>
+            </li>
+            
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>    
+    
+    
+    <!-- El pie de página debe estar dentro del body -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/bernardo-recamales-guti%C3%A9rrez-13b87a2a1/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Remolino87" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
