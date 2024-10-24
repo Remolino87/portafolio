@@ -26,7 +26,8 @@ SECRET_KEY = "django-insecure-fm6=l0@q(abb!n^u5-9y$rm4y_1r83chk!!-4#v-!3$i%+du!x
 # ADVERTENCIA DE SEGURIDAD: ¡no ejecute con la depuración activada en producción!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['portafolio-897r.onrender.com', 'localhost']
+
 
 
 # Definición de la aplicación
@@ -70,7 +71,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "portafolio.wsgi.application"
+WSGI_APPLICATION = 'portafolio.portafolio.wsgi.application'
+
 
 
 # Base de datos
